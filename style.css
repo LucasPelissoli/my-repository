@@ -191,11 +191,13 @@ h1{
     display: flex;
     overflow-x: auto; /*cria uma barra de rolagem para esta div*/
     scroll-snap-type: x mandatory;
+    align-items: center;
 }
 .item{
     flex: none;      /*tira as modificaçoes que o flex aplica na img*/
     width: 90%;     /*90% para mostrar 10% de outras imagens e indicar que tem mais que uma imagem só*/
-    height: 500px;
+    height: 100%;
+    max-height: 500px;
     scroll-snap-align: center;  /*opçao de "start" para aparecer a imagem a partir do começo e nao no centro*/
 }
 #items-wrapper img{
