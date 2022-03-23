@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;    /*faz o scroll da navegaçao de pagina ser suave */
+}
+
+body{
+    background-color: white;
+    font-size: 100%;
+}
+
+header{
+    width: 100%; 
+    Position: fixed;  /* FAZ O HEADER SEMPRE APARECER NA TELA, MESMO ROLANDO PARA BAIXO */
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+    background-color:black;
+}
+
+.logo_header{
+    height: 80px;
+}
+.navegacao_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+.navegacao_item{
+    font-size: 20px;
+    color: rgb(194, 194, 194);
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+.navegacao_item:hover{
+    border-bottom: 0.5rem solid;
+}
+
+.apresentacao{
+    overflow: hidden;      /* Mesmo que a imagem reajuste para tamanho maior que a pagina, os pedaços a mais ficam "escondidos"*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+.imagem_apresentacao{
+    overflow: hidden;
+    width: 100%;
+    min-width: 900px;
+    margin-top: 80px;
+   
+}
+
+.faca_parte{
+    margin-bottom: 50px;
+}
+h1{
+    padding-top: 50px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.icones_faca_parte{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:center;
+}
+.icone_faca_parte{
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    background-color: dimgray;
+    color: white;
+    margin: 5px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;        /*Determina o tempo que a "Animaçao" vai perdurar* (em hover)*/
+    font-size: 25px;
+    text-decoration: none;
+}
+.icone_faca_parte:hover{
+    background: aqua;
+}
+.icones_faca_parte i{
+    transition: 0.5s all;  
+}
+.icone_faca_parte:hover > i{   /*Quando o mouse estiver encima do icone >> faz a alteraçao no "i"*/
+    transform: scale(1.4)rotate(26deg);
+}
+.divpodcast{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mic{
+    font-size: 100px;
+    width: 110px;
+    height: 110px;
+    color: black;
+    margin-top: 20px;
+}
+
+.voce_sabe{
+    margin: 14%;
+}
+.div1_voce_sabe{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.divtest{
+    margin-top: 80px;
+    width: 100%;
+}
+.conteudo1_voce_sabe{
+    text-indent: 40px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.img_rp_01{margin-top: 10px;
+    width: 100%;
+    max-width: 600px;
+
+}.img_rp_02{
+    margin-top: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+.div2_voce_sabe{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.conteudo2_voce_sabe{
+    text-indent: 40px;
+    font-size: 24px;
+    margin-top: 80px;
+    width: 100%;
+    text-align: justify;
+}
+.img_rp_03{
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.galeriaimagem01{
+    width: 100%;
+}
+
+
+/*--------Galeria slider responsiva--------*/
+
+.secgaleria{
+    margin: 0;
+    padding: 0;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a3c3f;
+}
+
+#items-wrapper{  
+    width: 100vw;
+    max-width: 1100px;  
+}
+#items{
+    display: flex;
+    overflow-x: auto; /*cria uma barra de rolagem para esta div*/
+    scroll-snap-type: x mandatory;
+}
+.item{
+    flex: none;      /*tira as modificaçoes que o flex aplica na img*/
+    width: 90%;     /*90% para mostrar 10% de outras imagens e indicar que tem mais que uma imagem só*/
+    height: 500px;
+    scroll-snap-align: center;  /*opçao de "start" para aparecer a imagem a partir do começo e nao no centro*/
+}
+#items-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*faz a imagem se reajustar ao tamanho da div pai*/
+} 
+/*--------fim Galeria slider responsiva--------*/
+
+.regras{
+    margin: 14%;
+}
+.div_regras{
+    margin-top: 70px;
+}
+.conteudo_regra{
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.lore{
+    margin: 14%;
+}
+.titulo_lore{
+    margin-bottom: 60px;
+}
+.conteudo_lore{
+    text-indent: 40px;
+    font-size: 24px;
+    text-align: justify;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.rodape{
+    background-color:black;
+}
+.divarames{
+    display: flex;
+    flex-direction: row;
+}
+.arame{
+    width: 33%;
+}
+.img_rodape{
+    width: 25%;
+    max-width: 150px;
+}
+.divimagemrodape{
+    text-align: center;
+}
