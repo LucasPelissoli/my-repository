@@ -12,12 +12,29 @@ html{
     scroll-behavior: smooth;    /*faz o scroll da navegaçao de pagina ser suave */
 }
 
+::-webkit-scrollbar{ /*definir largura da scrollbar (tem que ter esta tag no css para abrir o kit do scrollbar)*/
+    width: 10px;
+    height: 15px;
+}
+::-webkit-scrollbar-track{
+    background: rgba(160, 172, 172, 0.336);
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb{
+    background: #3a3c3f;
+    border-radius: 30px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #4f5257;
+}
+
 body{
     background-color: white;
     font-size: 100%;
 }
 
 header{
+    z-index: 2;  /*zindex trabalha os items em Layers, 1 atras e mais alto acima*/
     width: 100%; 
     Position: fixed;  /* FAZ O HEADER SEMPRE APARECER NA TELA, MESMO ROLANDO PARA BAIXO */
     height: 80px;
@@ -26,7 +43,9 @@ header{
     align-items: center;
     justify-content: space-around;
     padding: 24px;
-    background-color:black;
+    background: rgba(117, 117, 117, 0.35);   /* efeito vidro*/
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );  /*efeito vidro*/
+    backdrop-filter: blur( 13.5px );         /*efeito vidro*/
 }
 
 .logo_header{
@@ -36,13 +55,14 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 32px;
+    gap: 22px;
 }
 .navegacao_item{
-    font-size: 20px;
-    color: rgb(194, 194, 194);
+    font-size: min(4vw, 20px);
+    color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
     transition: 0.5s;
+    font-weight: 900;
 }
 .navegacao_item:hover{
     border-bottom: 0.5rem solid;
@@ -59,12 +79,12 @@ header{
     overflow: hidden;
     width: 100%;
     min-width: 900px;
-    margin-top: 80px;
-   
+    margin-top: 40px;
 }
 
 .faca_parte{
     margin-bottom: 50px;
+    
 }
 h1{
     padding-top: 50px;
@@ -107,6 +127,14 @@ h1{
     flex-direction: column;
     align-items: center;
 }
+.imagem_podcast{
+    width: 100%;
+}
+.link_podcast{
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
 #mic{
     font-size: 100px;
     width: 110px;
@@ -114,9 +142,32 @@ h1{
     color: black;
     margin-top: 20px;
 }
+.parceirospodcast{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+.parceirospodcast img{
+    width: 100px;
+}
+.parceirospodcast a{
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 800;
+}
+.parceiro{
+    display: flex;
+    flex-direction: column;
+}
 
 .voce_sabe{
-    margin: 14%;
+    margin: 4%;
+}
+.titulo_voce_sabe{
+    border-top: 2px dotted rgba(0, 0, 0, 0.103);
 }
 .div1_voce_sabe{
     display: flex;
@@ -124,6 +175,9 @@ h1{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;  /*Centraliza a div*/
 }
 .divtest{
     margin-top: 80px;
@@ -152,6 +206,9 @@ h1{
     justify-content: space-around;
     flex-wrap: wrap;
     font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;  /*Centraliza a div*/
 }
 .conteudo2_voce_sabe{
     text-indent: 40px;
@@ -174,9 +231,10 @@ h1{
 /*--------Galeria slider responsiva--------*/
 
 .secgaleria{
-    margin: 0;
+    margin: 80px 0px 0px 0px ;
     padding: 0;
-    height: 600px;
+    height: 90vw;
+    max-height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,11 +249,13 @@ h1{
     display: flex;
     overflow-x: auto; /*cria uma barra de rolagem para esta div*/
     scroll-snap-type: x mandatory;
+    align-items: center;
 }
 .item{
     flex: none;      /*tira as modificaçoes que o flex aplica na img*/
     width: 90%;     /*90% para mostrar 10% de outras imagens e indicar que tem mais que uma imagem só*/
-    height: 500px;
+    height: 100%;
+    max-height: 700px;
     scroll-snap-align: center;  /*opçao de "start" para aparecer a imagem a partir do começo e nao no centro*/
 }
 #items-wrapper img{
@@ -203,13 +263,38 @@ h1{
     height: 100%;
     object-fit: cover; /*faz a imagem se reajustar ao tamanho da div pai*/
 } 
+.div_botao{
+    display: flex;
+    justify-content: center;
+    background-color: #3a3c3f;
+    padding-bottom: 20px;
+    transition: 0.5s all;
+}
+.botao_galeria{
+    font-size: 30px;
+    color: white;
+    padding: 30px 20px 40px 20px;
+    background-color: black;
+    border-radius: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.377);
+    transition: 0.3s all;
+}
+.botao_galeria:hover{
+    font-size: 35px;
+
+}
 /*--------fim Galeria slider responsiva--------*/
 
 .regras{
-    margin: 14%;
+    margin: 4%;
+    border-top: 2px dotted rgba(0, 0, 0, 0.103);
+    margin-top: 80px;
 }
 .div_regras{
-    margin-top: 70px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;  /*Centraliza a div*/
 }
 .conteudo_regra{
     margin-top: 20px;
@@ -217,8 +302,32 @@ h1{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.servidor{
+    padding-bottom: 40px;
+    padding: 4%;
+}
+.boxinfoserver{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;  /*Centraliza a div*/
+    overflow-wrap: break-word;
+    background-color: rgb(206, 206, 206);
+    border-radius: 20px;
+    box-shadow: 0 2px 16px 0 rgba( 31, 38, 135, 0.37 );  /*efeito vidro*/
+}
+.infoserver{
+    font-weight: 100;
+    text-indent: 40px;
+    font-size: 28px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: justify;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 4%;
+}
+
 .lore{
-    margin: 14%;
+    margin: 4%;
 }
 .titulo_lore{
     margin-bottom: 60px;
@@ -228,6 +337,30 @@ h1{
     font-size: 24px;
     text-align: justify;
     font-family: 'Roboto Condensed', sans-serif;
+}
+.conteudo_lore2{
+    text-indent: 40px;
+    font-size: 24px;
+    text-align: justify;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: none;
+}
+.divlermais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lermais{
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    background-color: black;
+    border-radius: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.377);
+    transition: 0.3s all;
+    cursor: pointer;
 }
 
 .rodape{
@@ -246,4 +379,14 @@ h1{
 }
 .divimagemrodape{
     text-align: center;
+}
+
+/*Animaçoes scroll*/
+
+.hidden{
+    opacity: 0;
+    transition: 1s;
+}
+.mostrar{
+    opacity: 1;
 }
