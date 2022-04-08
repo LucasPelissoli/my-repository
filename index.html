@@ -7,7 +7,8 @@
     <meta name="description" content="SCUMBRASIL.TV o melhor servidor de roleplay de Scum do brasil">
     <script src="https://kit.fontawesome.com/9e3cd5b8ed.js" crossorigin="anonymous"></script>
     <title>SCUMBRASIL.TV Roleplay</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">       <!--carrega codigo CSS-->
+    <script src="scripts.js"></script>        <!--carrega codigo JS-->
 </head>
 <body>
 
@@ -28,7 +29,7 @@
         </section>
 
         <br>  <br>                                            <!--duas quebras de linhas para alinhar a ancora-->
-        <section class="faca_parte">
+        <section class="faca_parte" >
             <h1 class="titulo_faca_parte">Participe de nossa comunidade</h1>
             <div class="icones_faca_parte">
                 <a class="icone_faca_parte" href="https://discord.gg/kmy8kGtGRB"><i class="fa-brands fa-discord"></i></a>
@@ -40,13 +41,32 @@
                 <a class="icone_faca_parte" href="https://chat.whatsapp.com/G8iEUC2YKeVJtO9HeMWBOe"><i class="fa-brands fa-whatsapp"></i></a>
                 <a class="icone_faca_parte" href="https://br.pinterest.com/scumbrasiltvroleplay/rp-no-scum/"><i class="fa-brands fa-pinterest"></i></a>
             </div>
-            <div class="divpodcast">
+            <div class="divpodcast hidden">
                 <h1 class="titulo_faca_parte">Escute nosso Podcast</h1>
                <!-- 
                    <a class="icone_faca_parte" id="mic" href="https://chat.whatsapp.com/G8iEUC2YKeVJtO9HeMWBOe"><i class="fa-solid fa-microphone-lines"></i></a>
                 -->
                 <a class="link_podcast" href="https://discord.gg/CGCP9QexkZ"><img class="imagem_podcast" src="imagens/podcast.jpeg"></a>
 
+                <h1 class="hidden">Parceiros</h1>
+                <div class="parceirospodcast hidden">
+                    <div class="parceiro">
+                        <img src="imagens/rosto1.png">
+                        <a>@parceiro01</a>
+                    </div>
+                    <div class="parceiro">
+                        <img src="imagens/rosto1.png">
+                        <a>@parceiro01</a>
+                    </div>
+                    <div class="parceiro">
+                        <img src="imagens/rosto1.png">
+                        <a>@parceiro01</a>
+                    </div>
+                    <div class="parceiro">
+                        <img src="imagens/rosto1.png">
+                        <a>@parceiro01</a>
+                    </div>
+                </div>
             </div>
 
 
@@ -54,15 +74,15 @@
 
         <a class="ancorainicio" name="oqueerp"></a>        <!-- Ancora #Oque é RP-->
         <section class="voce_sabe">  
-            <h1 class="titulo_voce_sabe">Voce sabe o que é Roleplay ?</h1>
-            <div class="div1_voce_sabe">
+            <h1 class="titulo_voce_sabe hidden">Voce sabe o que é Roleplay ?</h1>
+            <div class="div1_voce_sabe hidden">
                 <div class="divtest">
                     <p class="conteudo1_voce_sabe">Roleplay é uma forma de jogo em que os jogadores muitas vezes fingem ser outra pessoa, trabalhando<strong> somente com a criatividade dos jogadores e com os recursos que é oferecido.</strong> No caso deve-se interpretar a realidade.</p>
                 </div>
                 <img class="img_rp_01" src="imagens/01.jpeg">
                 <img class="img_rp_02" src="imagens/02.jpeg">
             </div>
-            <div class="div2_voce_sabe">
+            <div class="div2_voce_sabe hidden">
                 <p class="conteudo2_voce_sabe">Dentro de qualquer servidor de roleplay existem dois tipos de chat: OOC (Out of Character = fora do personagem) que deve ser usado para conversar algo que não seja relacionado ao personagem ou tirar dúvidas com quem está administrando o roleplay; e o IC (In Character = dentro do personagem) onde deverá interpretar o seu personagem.</p>
                 <img class="img_rp_03" src="imagens/rp3.jpg">
             </div>
@@ -70,18 +90,20 @@
         </section>
 
 
-        <section class="secgaleria"> 
+        <section class="secgaleria hidden"> 
 
             <div id="items-wrapper">
                 <div id="items">
-                    <div class="item"><img src="imagens/galeria/03.png"></div>
+                    <div class="item"><img src="imagens/galeria/01.jpg"></div>
                     <div class="item"><img src="imagens/galeria/02.jpg"></div>
-                    <div class="item"><img src="imagens/galeria/01.jpeg"></div>
-                    <div class="item"><img src="imagens/galeria/04.jpeg"></div>
-                    <div class="item"><img src="imagens/galeria/05.jpeg"></div>
+                    <div class="item"><img src="imagens/galeria/03.jpg"></div>
+                    <div class="item"><img src="imagens/galeria/04.jpg"></div>
+                    <div class="item"><img src="imagens/galeria/05.png"></div>
                     <div class="item"><img src="imagens/galeria/06.jpg"></div>
                     <div class="item"><img src="imagens/galeria/07.jpg"></div>
-                    <div class="item"><img src="imagens/galeria/08.jpg"></div>
+                    <div class="item"><img src="imagens/galeria/08.png"></div>
+                    <div class="item"><img src="imagens/galeria/09.jpg"></div>
+                    <div class="item"><img src="imagens/galeria/10.png"></div>
                 </div>
             </div>
         </section>
@@ -94,7 +116,7 @@
 
 
 
-        <section class="regras">
+        <section class="regras hidden">
             <h1 class="titulo_regras">Regras e Leis na ilha</h1>
             <div class="div_regras">
                 <p class="conteudo_regra"> 
@@ -113,7 +135,7 @@
         </section>
 
         <section class="servidor">
-            <div class="boxinfoserver">
+            <div class="boxinfoserver hidden">
                 <h1>SERVER IP: 172.107.197.90:28002<br> SCUMBrasil.TV Roleplay</h1>
                 <p class="infoserver">
                     - Wipe a cada temporada(+ ou - 4 meses). Dependendo de como está o RP pode levar mais Tempo para Wiper.<br>
@@ -141,10 +163,17 @@
 
         </section>
 
-        <section class="lore">
+        <section class="lore hidden">
             <h1 class="titulo_lore">Lore do Servidor</h1>
             <p class="conteudo_lore">
-                 - A TEC1, empresa que atua em vários ramos inclusive em medicina, ciências e tecnologia, criou a/o “BCU”, uma espécie de CHIP implantado na nuca de cada indivíduo no qual através do mesmo a TEC1 recebe informações importantíssimas, senso e monitoramento de cada sobrevivente, eles estabeleceram seus laboratórios e reforçaram a segurança criando locais militares específicos onde estes laboratórios ficam, tudo isso em uma ilha. 
+                 - A TEC1, empresa que atua em vários ramos inclusive em medicina, ciências e tecnologia, criou a/o “BCU”, uma espécie de CHIP implantado na nuca de cada indivíduo no qual através do mesmo a TEC1 recebe informações importantíssimas, senso e monitoramento de cada sobrevivente, eles estabeleceram seus laboratórios e reforçaram a segurança criando locais militares específicos onde estes laboratórios ficam, tudo isso em uma ilha.... 
+            </p>
+            <div class="divlermais">
+                <button onclick="leiamais()" class="lermais">Ler mais...</button>
+            </div>
+            <p class="conteudo_lore2"> 
+                - A TEC1, empresa que atua em vários ramos inclusive em medicina, ciências e tecnologia, criou a/o “BCU”, uma espécie de CHIP implantado na nuca de cada indivíduo no qual através do mesmo a TEC1 recebe informações importantíssimas, senso e monitoramento de cada sobrevivente, eles estabeleceram seus laboratórios e reforçaram a segurança criando locais militares específicos onde estes laboratórios ficam, tudo isso em uma ilha.
+
                 Nesta ilha há acontecimentos de diversas naturezas, entre elas o fato dos projetos ter dado algo errado com o chip chamado BCU, esse chip é usado por todos ali que participam do trabalho da TEC1 na ilha e houve um erro que gerou um defeito nos BCUs de muitos participantes, trazendo à tona coisas que saíram de controle conforme a própria TEC1 teria tramado para o “PROGRAMA”, mas isso trouxe muitos problemas a ilha pois, muitos que participavam do programa que sumiram reapareceram em forma de PUPPETs como são chamados pela TEC1.
                 Devido a algumas perdas de comunicação e ataques a instalações da TEC1 por grupos de sobreviventes da ilha denominados de tribos, e também a fuga dos prisioneiros na ilha, a TEC1 começou o protocolo de segurança “PRPT” (Proteção de Recursos e Pesquisas da TEC1), ativando assim a segurança dos bunkers, essas instalações são protegidas por robôs conhecidos como Sentinelas, elas são programadas para reconhecer sobreviventes sejam quem for que aparece próximo a esses locais e então extermina-los.
                 Porem por motivos pessoais e discordâncias com a forma que a TEC1 agia, um pequeno grupo de funcionários da empresa, conseguiu vazar alguns vídeos que a TEC1 fazia com o monitoramento por drones, só que o que esse grupo não contava é que esses vídeos vazados acabou resultando um efeito contrário, pois figurões poderosos, empresários, engenheiros e legítimos mafiosos do mundo inteiro viram uma forma de lucrar com o que acontecia naquela ilha, e então vários países com o intuito de juntar pessoas dos diversos tipos, médicos, mecânicos, alcoólatras, viciados em drogas e até mesmo assassinos e prisioneiros para a ilha conforme sobreviventes iam morrendo, financiando também a TEC1 na qual estava no controle de tudo, usando de um canal de televisão e até mesmo online no qual o público especifico se divertia vendo as pessoas sobreviverem naquela ilha, criando assim um reality show conhecido como “SCUM”. 
@@ -167,5 +196,21 @@
 
     </footer>
 
+    <script>        /*script de observer para pegar os objetos mostrados na tela(só funciona no condigo html)*/
+        const observer = new IntersectionObserver(entries => {
+            console.log(entries)
+
+            Array.from(entries).forEach(entry =>{
+                if (entry.intersectionRatio >= 0.2){
+                    entry.target.classList.add('mostrar')
+                }
+            })
+        }, {
+            threshold: [0, .2, .5, 1]
+        })
+        Array.from(document.querySelectorAll('.hidden')).forEach(element => {
+            observer.observe(element)
+        })
+    </script>
 </body>
 </html>
